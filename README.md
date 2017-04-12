@@ -1,3 +1,3 @@
-# 航加房产
+# A new functional website about facility management written by Tivon
 
-相关技术文档、业务规则文档等点击查看右上方wiki
+Bussiness chat at steven_allen@163.com
