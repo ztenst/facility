@@ -1,7 +1,7 @@
 <?php
 /**
  * 同步登录处理
- * @author weibaqiu
+ * @author tivon
  * @version 2016年9月1日
  */
 class HangjiaUc_ServerModel_SynLogin extends HangjiaUc_ServerModel

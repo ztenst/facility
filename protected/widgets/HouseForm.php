@@ -1,7 +1,7 @@
 <?php
 /**
  * 动态表单
- * @author weibaqiu
+ * @author tivon
  * @date 2015-04-25
  */
 class HouseForm extends CActiveForm

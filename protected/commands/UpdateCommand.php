@@ -3,7 +3,7 @@
  * 更新脚本
  * ========================更新记录====================
  * v20151223 合并资讯，一旦执行，无法逆操作
- * @author weibaqiu
+ * @author tivon
  * @date 2015-10-09
  */
 class UpdateCommand extends CConsoleCommand

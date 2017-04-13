@@ -1,7 +1,7 @@
 <?php
 /**
  * 记录操作日志
- * @author weibaqiu
+ * @author tivon
  * @date 2015-06-02
  */
 class ActiveRecordLogableBehavior extends CActiveRecordBehavior

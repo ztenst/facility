@@ -1,7 +1,7 @@
 <?php
 /**
  * 时间戳类
- * @author weibaqiu
+ * @author tivon
  * @date 2015-05-08
  */
 class TimeTools

@@ -7,7 +7,7 @@
 <!-- BEGIN HEAD -->
 <head>
 <meta charset="utf-8"/>
-<title><?php echo $this->pageTitle ?>-系统管理后台</title>
+<title><?php echo $this->pageTitle ?>-弘钢机械设备系统管理后台</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
@@ -61,7 +61,7 @@
 		<!-- BEGIN LOGO -->
 		<div class="page-logo" style="width:500px">
 			<a href="<?php echo $this->createUrl('/admin/common/index') ?>"  class="logo-name">
-			系统管理后台
+			弘钢机械设备系统管理后台
 			<!-- <img src="/static/admin/layout/img/logo.png" alt="logo" class="logo-default"/> -->
 			</a>
 			<div class="menu-toggler sidebar-toggler hide">
@@ -76,28 +76,6 @@
 		<!-- BEGIN TOP NAVIGATION MENU -->
 		<div class="top-menu">
 			<ul class="nav navbar-nav pull-right">
-                <li class="dropdown dropdown-user">
-					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-						<span class="username username-hide-on-mobile">
-							<i class="fa fa-home"></i>操作首页
-						</span>
-						<i class="fa fa-angle-down"></i>
-					</a>
-					<ul class="dropdown-menu dropdown-menu-default">
-						<li>
-                            <?php
-                                //$substation是分站区域id
-                                echo CHtml::link('预览全站首页', $this->createUrl('/home/index/active',isset($substation)&&$substation?['fenzhan'=>$this->substations[$substation]->area->pinyin]:[]), array('target'=>'_blank'));
-
-                                echo CHtml::ajaxLink('发布全站首页',$this->createUrl('/home/index/build',isset($substation)&&$substation?['fenzhan'=>$this->substations[$substation]->area->pinyin]:[]),array('success'=>'function(d){if(d.code==1){toastr.success(d.msg)}else{toastr.error("更新失败，请重试")}}'));
-                                 //$substation是分站区域id
-                                echo CHtml::link('预览二手房首页', $this->createUrl('/resoldhome/index/active',isset($substation)&&$substation?['fenzhan'=>$this->substations[$substation]->area->pinyin]:[]), array('target'=>'_blank'));
-
-                                echo CHtml::ajaxLink('发布二手房首页',$this->createUrl('/resoldhome/index/build',isset($substation)&&$substation?['fenzhan'=>$this->substations[$substation]->area->pinyin]:[]),array('success'=>'function(d){if(d.code==1){toastr.success(d.msg)}else{toastr.error("更新失败，请重试")}}'));
-                            ?>
-						</li>
-					</ul>
-				</li>
 				<!-- BEGIN NOTIFICATION DROPDOWN -->
 				<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
 
@@ -115,8 +93,6 @@
 					</a>
 					<ul class="dropdown-menu dropdown-menu-default">
 						<li>
-                            <a href="<?php echo $this->createUrl('/admin/worker/edit',array('id'=>Yii::app()->user->id)) ?>">
-                                <i class="icon-user"></i> 修改资料 </a>
 							<a href="<?php echo $this->createUrl('/admin/common/logout') ?>">
 							<i class="icon-key"></i> 退出系统 </a>
 						</li>
@@ -199,7 +175,7 @@
 <!-- BEGIN FOOTER -->
 <div class="page-footer">
 	<div class="page-footer-inner">
-		 2015 &copy; <?php echo '马德里工作室版权所有'; ?>
+		 2017 &copy; <?php echo '马德里工作室版权所有'; ?>
 	</div>
 	<div class="scroll-to-top">
 		<i class="icon-arrow-up"></i>

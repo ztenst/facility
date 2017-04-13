@@ -8,7 +8,7 @@
  *     data:xxx
  * }
  * code:返回状态码|version:客户端版本|msg:服务端返回的数据
- * @author weibaqiu
+ * @author tivon
  * @date 2015-11-04
  */
 class ClientMobile extends CApplicationComponent

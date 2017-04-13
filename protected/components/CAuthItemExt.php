@@ -1,7 +1,7 @@
 <?php
 /**
  * 重写该类
- * @author weibaqiu
+ * @author tivon
  * @date 2015-04-25
  */
 class CAuthItemExt extends CComponent

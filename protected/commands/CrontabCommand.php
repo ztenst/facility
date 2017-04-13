@@ -1,7 +1,7 @@
 <?php
 /**
  * 定时任务脚本
- * @author weibaqiu
+ * @author tivon
  * @date 2015-12-04
  */
 class CrontabCommand extends CConsoleCommand

@@ -1,7 +1,7 @@
 <?php
 /**
  * 模块配置
- * @author weibaqiu
+ * @author tivon
  * @date 2015-09-24
  */
 class HomeModule extends CWebModule

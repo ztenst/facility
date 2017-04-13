@@ -1,7 +1,7 @@
 <?php
 /**
  * 更新密码处理
- * @author weibaqiu
+ * @author tivon
  * @version 2016年9月1日
  */
 class HangjiaUc_ServerModel_UpdatePwd extends HangjiaUc_ServerModel

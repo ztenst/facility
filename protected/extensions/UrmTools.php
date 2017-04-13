@@ -1,7 +1,7 @@
 <?php 
 /**
  * 用于垂直项目与URM后台的通信交互
- * @author weibaqiu
+ * @author tivon
  * @date   2015-07-10
  */
 class UrmTools

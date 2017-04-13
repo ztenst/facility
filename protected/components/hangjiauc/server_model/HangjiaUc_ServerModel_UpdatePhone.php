@@ -4,7 +4,7 @@
  * 更新绑定手机注意规则：
  * 1. 手机号若已绑定帐号，要给出提示，禁止操作，需要去绑定的帐号先解绑。
  * 2. 帐号已经绑定手机号，要给出提示，要先解绑旧手机号。
- * @author weibaqiu
+ * @author tivon
  * @version 2016年9月1日
  */
 class HangjiaUc_ServerModel_UpdatePhone extends HangjiaUc_ServerModel

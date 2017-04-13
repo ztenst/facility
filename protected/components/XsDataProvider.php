@@ -1,7 +1,7 @@
 <?php
 /**
  * 迅搜专用的DataProvider
- * @author weibaqiu
+ * @author tivon
  * @date 2015-09-24
  */
 class XsDataProvider extends CDataProvider

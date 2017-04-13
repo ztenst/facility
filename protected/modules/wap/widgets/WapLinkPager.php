@@ -1,7 +1,7 @@
 <?php
 /**
  * 前台home模块所用的分页类，继承CLinkPager
- * @author weibaqiu
+ * @author tivon
  * @date 2015-05-28
  */
 class WapLinkPager extends CLinkPager

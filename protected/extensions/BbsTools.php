@@ -1,7 +1,7 @@
 <?php
 /**
  * 与论坛相关的方法
- * @author weibaqiu
+ * @author tivon
  * @version 2015-08-17 13:43:33
  */
 class BbsTools

@@ -2,7 +2,7 @@
 /**
  * 配置元素行为类
  * 为了扩展配置元素相关配套的函数
- * @author weibaqiu
+ * @author tivon
  * @version 2016-11-03
  */
 class SiteSettingBehavior extends CActiveRecordBehavior

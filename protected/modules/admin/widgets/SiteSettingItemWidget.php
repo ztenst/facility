@@ -1,7 +1,7 @@
 <?php
 /**
  * 站点配置自定义空间设置
- * @author weibaqiu
+ * @author tivon
  * @version 2016-10-25
  */
 class SiteSettingItemWidget extends CWidget

@@ -1,7 +1,7 @@
 <?php
 /**
  * UC接口动作
- * @author weibaqiu
+ * @author tivon
  * @version 2016-01-19
  */
 class SynlogoutAction extends UcReceiverAction

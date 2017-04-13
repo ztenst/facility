@@ -1,7 +1,7 @@
 <?php
 /**
  * 流水日志记录类
- * @author weibaqiu
+ * @author tivon
  * @version 2016-07-20
  */
 class JikeUserLog extends CComponent

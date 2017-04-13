@@ -1,7 +1,7 @@
 <?php
 /**
  * UcReceiver基类
- * @author weibaqiu
+ * @author tivon
  * @version 2016-01-18
  */
 class UcReceiverAction extends CAction

@@ -2,7 +2,7 @@
 /**
  * 带不同颜色的提示条
  * 用于提示用户操作结果，在操作判断完成后使用Yii::app()->user->setFlash('success');设置成功提示（相应的可以使用success表达成功信息、使用error表达错误信息）
- * @author weibaqiu
+ * @author tivon
  * @date 2015-04-22
  */
 class HouseTip extends CWidget

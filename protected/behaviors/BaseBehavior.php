@@ -3,7 +3,7 @@
  * AR基础行为类
  * 通过一个基础行为类，来实现类似继承效果
  * 由于历史原因，生成的model类是直接继承框架中的AR类的，所以就不改其继承的父类了，而是通过行为类来实现。
- * @author weibaqiu
+ * @author tivon
  * @version 2016-11-11
  */
 class BaseBehavior extends CActiveRecordBehavior

@@ -2,7 +2,7 @@
 /**
  * 参数配置文件
  *
- * @author weibaqiu
+ * @author tivon
  * @date 2015-09-07
  */
 return array(

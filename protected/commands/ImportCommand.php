@@ -1,7 +1,7 @@
 <?php
 /**
  * 数据迁移脚本
- * @author weibaqiu
+ * @author tivon
  * @date 2015-10-09
  */
 class ImportCommand extends CConsoleCommand

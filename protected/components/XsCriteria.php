@@ -11,7 +11,7 @@
  * $dataProvider = CActiveRecord::model()->getXsList($criteria,15);
  * ```
  *
- * @author weibaqiu
+ * @author tivon
  * @date 2015-12-23
  */
 class XsCriteria extends CComponent

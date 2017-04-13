@@ -1,7 +1,7 @@
 <?php
 /**
  * admin后台面包屑
- * @author weibaqiu
+ * @author tivon
  * @date 2015-04-20
  */
 Yii::import('zii.widgets.CBreadcrumbs');

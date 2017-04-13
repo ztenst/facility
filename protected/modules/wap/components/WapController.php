@@ -1,7 +1,7 @@
 <?php
 /**
  * wap模块控制器基类
- * @author weibaqiu
+ * @author tivon
  * @date 2015-09-22
  */
 class WapController extends Controller

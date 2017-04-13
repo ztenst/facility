@@ -1,7 +1,7 @@
 <?php
 /**
  * 配置文件
- * @author weibaqiu
+ * @author tivon
  * @date 2015-09-07 13:35:55
  */
 if (!function_exists('fatallog')) {

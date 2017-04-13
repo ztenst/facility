@@ -1,7 +1,7 @@
 <?php
 /**
  * 更新用户绑定微信的openid
- * @author weibaqiu
+ * @author tivon
  * @version 2016-09-19
  */
 class HangjiaUc_ServerModel_UpdateOpenid extends HangjiaUc_ServerModel

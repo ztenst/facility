@@ -1,7 +1,7 @@
 <?php
 /**
  * 房产v2升级数据转换脚本
- * @author weibaqiu
+ * @author tivon
  * @version 2016-06-22
  */
 class V2 extends CComponent

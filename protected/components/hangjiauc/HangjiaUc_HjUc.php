@@ -2,7 +2,7 @@
 /**
  * 航加用户体系函数接口组件
  * 类名使用了伪命名空间（yii1蛋疼之处），HjUc会冲突
- * @author weibaqiu
+ * @author tivon
  * @version 2016-08-29
  */
  Yii::setPathOfAlias('hangjiauc', __DIR__);

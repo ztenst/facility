@@ -1,7 +1,7 @@
 <?php
 /**
  * 图片工具类，主要针对云存储的图片
- * @author weibaqiu
+ * @author tivon
  * @date 2015-04-29
  */
 class ImageTools extends CComponent

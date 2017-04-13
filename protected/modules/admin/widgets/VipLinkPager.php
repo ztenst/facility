@@ -1,10 +1,10 @@
 <?php
 /**
  * 后台分页
- * @author weibaqiu
+ * @author tivon
  * @date 2015-05-07
  */
-class AdminLinkPager extends CLinkPager{
+class VipLinkPager extends CLinkPager{
 	public function init()
 	{
 		parent::init();

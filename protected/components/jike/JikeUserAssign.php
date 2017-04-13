@@ -1,7 +1,7 @@
 <?php
 /**
  * 订单分配处理类
- * @author weibaqiu
+ * @author tivon
  * @version 2016-07-18
  */
 class JikeUserAssign extends CComponent

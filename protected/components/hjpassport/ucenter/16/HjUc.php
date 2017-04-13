@@ -2,7 +2,7 @@
 /**
  * 发送请求到Ucenter
  * 封装了uc客户端函数库
- * @author weibaqiu
+ * @author tivon
  * @version 2016-02-05
  */
 class HjUc extends CComponent

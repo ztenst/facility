@@ -1,7 +1,7 @@
 <?php
 /**
  * 基于数据库的RBAC权限管理，重写web.auth.CDbAuthManager类和web.auth.CAuthManager类
- * @author  weibaqiu
+ * @author  tivon
  * @date 2015-04-25
  */
 class CDbAuthManagerExt extends CAuthManagerExt

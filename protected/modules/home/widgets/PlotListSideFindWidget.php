@@ -3,7 +3,7 @@
  * pc楼盘列表页右侧帮你找房报名表单
  * 报名订单除了order表之外的字段全部统一整理成文字放在note备注字段中
  * 请勿更新user表的相关字段，user表中的数据都是需要小编回访后确认的信息，不能随意覆盖。
- * @author weibaqiu
+ * @author tivon
  * @version 2016-10-13
  */
 class PlotListSideFindWidget extends CWidget

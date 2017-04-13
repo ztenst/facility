@@ -1,7 +1,7 @@
 <?php 
 /**
  * 修改基类
- * @author weibaqiu
+ * @author tivon
  * @date 2015-04-27
  */
 abstract class CAuthManagerExt extends CApplicationComponent

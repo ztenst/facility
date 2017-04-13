@@ -1,7 +1,7 @@
 <?php
 /**
  * 测试通信接口，类似uc中的testAction
- * @author weibaqiu
+ * @author tivon
  * @version 2016-01-13
  */
 class ConnectAction extends UcReceiverAction

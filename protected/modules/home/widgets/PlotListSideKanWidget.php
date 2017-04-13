@@ -1,7 +1,7 @@
 <?php
 /**
  * pc楼盘列表页右侧看房团活动数据列表
- * @author weibaqiu
+ * @author tivon
  * @version 2016-10-13
  */
 class PlotListSideKanWidget extends CWidget

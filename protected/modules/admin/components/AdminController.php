@@ -2,7 +2,7 @@
 
 /**
  * 后台模块admin控制器基类
- * @author weibaqiu
+ * @author tivon
  * @date 2015-04-20
  */
 class AdminController extends Controller
@@ -62,16 +62,16 @@ class AdminController extends Controller
     public function getVipMenu()
     {
         return [
-            ['label'=>'管理中心','icon'=>'icon-settings','url'=>'/vip/common/index','active'=>$this->route=='vip/common/index'],
-            ['label' => '文章管理','icon' => 'icon-speedometer', 'url' => ['/vip/news/list'],'active'=>$this->route=='vip/news/edit'||$this->route=='vip/news/list'],
+            ['label'=>'管理中心','icon'=>'icon-settings','url'=>'/admin/common/index','active'=>$this->route=='vip/common/index'],
+            ['label' => '文章管理','icon' => 'icon-speedometer', 'url' => ['/admin/news/list'],'active'=>$this->route=='vip/news/edit'||$this->route=='vip/news/list'],
             ['label' => '产品管理', 'icon' => 'icon-speedometer', 'items' => [
-                ['label' => '发布产品', 'url' => ['/vip/product/edit']],
-                ['label' => '产品列表', 'url' => ['/vip/product/list']],
+                ['label' => '发布产品', 'url' => ['/admin/product/edit']],
+                ['label' => '产品列表', 'url' => ['/admin/product/list']],
             ]],
-            ['label' => '订单管理','icon' => 'icon-speedometer', 'url' => ['/vip/order/list'],'active'=>$this->route=='vip/order/edit'||$this->route=='vip/order/list'],
-            ['label'=>'标签管理','icon'=>'icon-speedometer','url'=>['/vip/tag/list'],'active'=>$this->route=='vip/tag/edit'],
-            ['label'=>'用户采集','icon'=>'icon-speedometer','url'=>['/vip/user/list']],
-            ['label'=>'站点配置','icon'=>'icon-speedometer','url'=>['/vip/site/list'],'active'=>$this->route=='vip/site/edit'||$this->route=='vip/site/list'],
+            ['label' => '订单管理','icon' => 'icon-speedometer', 'url' => ['/admin/order/list'],'active'=>$this->route=='vip/order/edit'||$this->route=='vip/order/list'],
+            ['label'=>'标签管理','icon'=>'icon-speedometer','url'=>['/admin/tag/list'],'active'=>$this->route=='vip/tag/edit'],
+            ['label'=>'用户采集','icon'=>'icon-speedometer','url'=>['/admin/user/list']],
+            ['label'=>'站点配置','icon'=>'icon-speedometer','url'=>['/admin/site/list'],'active'=>$this->route=='vip/site/edit'||$this->route=='vip/site/list'],
             
         ];
     }

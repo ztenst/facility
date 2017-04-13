@@ -1,7 +1,7 @@
 <?php
 /**
  * 后台验证登录类
- * @author weibaqiu
+ * @author tivon
  * @date 2015-04-22
  */
 class AdminIdentity extends CUserIdentity

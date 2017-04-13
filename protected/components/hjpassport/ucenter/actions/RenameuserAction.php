@@ -1,7 +1,7 @@
 <?php
 /**
  * UC接口动作：接收更改用户名
- * @author weibaqiu
+ * @author tivon
  * @version 2016-01-13
  */
 class RenameuserAction extends UcReceiverAction

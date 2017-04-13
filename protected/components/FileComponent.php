@@ -1,7 +1,7 @@
 <?php
 /**
  * 文件上传组件
- * @author weibaqiu
+ * @author tivon
  * @date 2015-04-24
  */
 use Qiniu\Auth;

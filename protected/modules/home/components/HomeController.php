@@ -1,7 +1,7 @@
 <?php
 /**
  * 前台模块home控制器基类
- * @author weibaqiu
+ * @author tivon
  * @date 2015-09-22
  */
 class HomeController extends Controller
