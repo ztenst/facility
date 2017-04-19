@@ -40,28 +40,16 @@ class ProductController extends AdminController{
 			$criteria->addCondition('cid=:cid');
 			$criteria->params[':cid'] = $cate;
 		}
-		if($xl) {
-			$criteria->addCondition('xl=:xl');
-			$criteria->params[':xl'] = $xl;
-		}
-		if($ptpz) {
-			$criteria->addCondition('ptpz=:ptpz');
-			$criteria->params[':ptpz'] = $ptpz;
-		}
-		if($house) {
-			$criteria->addCondition('house=:house');
-			$criteria->params[':house'] = $house;
-		}
 		$news = ProductExt::model()->undeleted()->getList($criteria,20);
-		$houses = [];
-		if($prs = $news->data) 
-			foreach ($prs as $key => $v) {
-				$v->houseInfo && $houses[$v->house] = $v->houseInfo->name;
-			}
+		// $houses = [];
+		// if($prs = $news->data) 
+		// 	foreach ($prs as $key => $v) {
+		// 		$v->houseInfo && $houses[$v->house] = $v->houseInfo->name;
+		// 	}
 		
 		$this->render('list',[
 			'cates'=>$this->cates,
-			'list'=>$prs,
+			'list'=>$news->data,
 			'pager'=>$news->pagination,
 			'type' => $type,
             'value' => $value,

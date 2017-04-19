@@ -1,12 +1,12 @@
 <?php
-$this->pageTitle = '产品列表';
+$this->pageTitle = '订单列表';
 $this->breadcrumbs = array($this->pageTitle);
 ?>
 <div class="table-toolbar">
     <div class="btn-group pull-left">
         <form class="form-inline">
             <div class="form-group">
-                <?php echo CHtml::dropDownList('type',$type,array('title'=>'名称'),array('class'=>'form-control','encode'=>false)); ?>
+                <?php echo CHtml::dropDownList('type',$type,array('phone'=>'电话','username'=>'用户名','pid'=>'产品id'),array('class'=>'form-control','encode'=>false)); ?>
             </div>
             <div class="form-group">
                 <?php echo CHtml::textField('value',$value,array('class'=>'form-control chose_text')) ?>
@@ -15,29 +15,19 @@ $this->breadcrumbs = array($this->pageTitle);
                 <?php echo CHtml::dropDownList('time_type',$time_type,array('created'=>'添加时间','updated'=>'修改时间'),array('class'=>'form-control','encode'=>false)); ?>
             </div>
             <?php Yii::app()->controller->widget("DaterangepickerWidget",['time'=>$time,'params'=>['class'=>'form-control chose_text']]);?>
-            <div class="form-group">
-                <?php echo CHtml::dropDownList('cate',$cate,$cates,array('class'=>'form-control chose_select','encode'=>false,'prompt'=>'--选择类型--')); ?>
-            </div>
-            
             <button type="submit" class="btn blue">搜索</button>
             <a class="btn yellow" onclick="removeOptions()"><i class="fa fa-trash"></i>&nbsp;清空</a>
         </form>
     </div>
-    <div class="pull-right">
-        <a href="<?php echo $this->createAbsoluteUrl('edit') ?>" class="btn blue">
-            添加产品 <i class="fa fa-plus"></i>
-        </a>
-    </div>
 </div>
    <table class="table table-bordered table-striped table-condensed flip-content table-hover">
     <thead class="flip-content">
-        <th class="text-center">排序</th>
+    <tr>
+        <!-- <th class="text-center">排序</th> -->
         <th class="text-center">ID</th>
-        <th class="text-center">名称</th>
-        <th class="text-center">类型</th>
-        <!-- <th class="text-center">系列</th>
-        <th class="text-center">葡萄品种</th>
-        <th class="text-center">酒庄</th> -->
+        <th class="text-center">用户</th>
+        <th class="text-center">产品名</th>
+        <th class="text-center">电话</th>
         <th class="text-center">添加时间</th>
         <th class="text-center">修改时间</th>
         <th class="text-center">状态</th>
@@ -47,16 +37,28 @@ $this->breadcrumbs = array($this->pageTitle);
     <tbody>
     <?php foreach($list as $k=>$v): ?>
         <tr>
-        <td style="text-align:center;vertical-align: middle" class="warning sort_edit"
-                data-id="<?php echo $v['id'] ?>"><?php echo $v['sort'] ?></td>
             <td style="text-align:center;vertical-align: middle"><?php echo $v->id; ?></td>
-            <td class="text-center"><?=$v->name?></td>
-            <td class="text-center"><?=TagExt::getNameByTag($v->cid)?></td>          
+            <td class="text-center"><?=$v->username?></td>
+            <td class="text-center"><?=$v->pname?></td>
+            <td class="text-center"><?=$v->phone?></td>            
             <td class="text-center"><?=date('Y-m-d',$v->created)?></td>
             <td class="text-center"><?=date('Y-m-d',$v->updated)?></td>
-            <td class="text-center"><?php echo CHtml::ajaxLink(ArticleExt::$status[$v->status],$this->createUrl('ajaxChangeStatus'), array('type'=>'get', 'data'=>array('id'=>$v->id),'success'=>'function(data){location.reload()}'), array('class'=>'btn btn-sm '.ArticleExt::$statusStyle[$v->status])); ?></td>
+            <td class="text-center">
+                <div class="btn-group">
+                    <button id="btnGroupVerticalDrop1" type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                    <?=$v->status?Yii::app()->params['orderArr'][$v->status]:'订单状态'?> <i class="fa fa-angle-down"></i>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop1">
+                        <?php foreach(Yii::app()->params['orderArr'] as $key=>$v1){?>
+                            <li>
+                                <?=CHtml::ajaxLink($v1,$this->createUrl('ajaxStatus',['kw'=>$key,'id'=>$v->id]),['success'=>'function(){location.reload();}'])?>
+                            </li>
+                          <?php  }?>
+                    </ul>
+                </div>
+            </td>
+
             <td style="text-align:center;vertical-align: middle">
-                <a href="<?php echo $this->createUrl('/admin/product/edit',array('id'=>$v->id)); ?>" class="btn default btn-xs green"><i class="fa fa-edit"></i> 修改 </a>
                 <?php echo CHtml::htmlButton('删除', array('data-toggle'=>'confirmation', 'class'=>'btn btn-xs red', 'data-title'=>'确认删除？', 'data-btn-ok-label'=>'确认', 'data-btn-cancel-label'=>'取消', 'data-popout'=>true,'ajax'=>array('url'=>$this->createUrl('ajaxDel'),'type'=>'get','success'=>'function(data){location.reload()}','data'=>array('id'=>$v->id))));?>
 
 
@@ -83,7 +85,7 @@ $this->breadcrumbs = array($this->pageTitle);
         });
     }
     function set_sort(_this, id, sort){
-            $.getJSON('<?php echo $this->createUrl('/admin/product/ajaxSort')?>',{id:id,sort:sort},function(dt){
+            $.getJSON('<?php echo $this->createUrl('/admin/news/ajaxSort')?>',{id:id,sort:sort},function(dt){
                 location.reload();
             });
         }

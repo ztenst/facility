@@ -172,7 +172,7 @@ class SiteExt extends Site{
     public static function getAttr($cate='',$attr='')
     {
         $model = self::model()->getSiteByCate($cate)->find();
-        return $model->$attr?$model->$attr:'';
+        return isset($model->$attr)&&$model->$attr?$model->$attr:'';
 
     }
 

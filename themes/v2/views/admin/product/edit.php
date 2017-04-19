@@ -13,6 +13,17 @@ $this->breadcrumbs = array('产品管理', $this->pageTitle);
         'insertcode','|',
         'horizontal','inserttable','|',
         'print','preview','searchreplace']]")); ?>
+<?php $this->widget('ext.ueditor.UeditorWidget',array('id'=>'ArticleExt_content1','options'=>"toolbars:[['fullscreen','source','undo','redo','|','customstyle','paragraph','fontfamily','fontsize'],
+        ['bold','italic','underline','fontborder','strikethrough','superscript','subscript','removeformat',
+        'formatmatch', 'autotypeset', 'blockquote', 'pasteplain','|',
+        'forecolor','backcolor','insertorderedlist','insertunorderedlist','|',
+        'rowspacingtop','rowspacingbottom', 'lineheight','|',
+        'directionalityltr','directionalityrtl','indent','|'],
+        ['justifyleft','justifycenter','justifyright','justifyjustify','|','link','unlink','|',
+        'insertimage','emotion','scrawl','insertvideo','music','attachment','map',
+        'insertcode','|',
+        'horizontal','inserttable','|',
+        'print','preview','searchreplace']]")); ?>
 <?php $form = $this->beginWidget('HouseForm', array('htmlOptions' => array('class' => 'form-horizontal'))) ?>
 <div class="form-group">
     <label class="col-md-2 control-label">名称<span class="required" aria-required="true">*</span></label>
@@ -22,13 +33,6 @@ $this->breadcrumbs = array('产品管理', $this->pageTitle);
     <div class="col-md-2"><?php echo $form->error($article, 'name') ?></div>
 </div>
 <div class="form-group">
-    <label class="col-md-2 control-label">外文名<span class="required" aria-required="true">*</span></label>
-    <div class="col-md-4">
-        <?php echo $form->textField($article, 'eng', array('class' => 'form-control')); ?>
-    </div>
-    <div class="col-md-2"><?php echo $form->error($article, 'eng') ?></div>
-</div>
-<div class="form-group">
     <label class="col-md-2 control-label">类型</label>
     <div class="col-md-4">
         <?php echo $form->dropDownList($article, 'cid', $cates, array('class' => 'form-control', 'encode' => false)); ?>
@@ -36,19 +40,18 @@ $this->breadcrumbs = array('产品管理', $this->pageTitle);
     <div class="col-md-2"><?php echo $form->error($article, 'cid') ?></div>
 </div>
 <div class="form-group">
-    <label class="col-md-2 control-label">售价<span class="required" aria-required="true">*</span></label>
-    <div class="col-md-4">
-        <?php echo $form->textField($article, 'price', array('class' => 'form-control')); ?>
-        <span class="help-inline">元</span>
+    <label class="col-md-2 control-label">产品特点</label>
+    <div class="col-md-8">
+        <?php echo $form->textArea($article, 'td', array('id'=>'ArticleExt_content')); ?>
     </div>
-    <div class="col-md-2"><?php echo $form->error($article, 'price') ?></div>
+    <div class="col-md-2"><?php echo $form->error($article, 'td')  ?></div>
 </div>
 <div class="form-group">
-    <label class="col-md-2 control-label">产品介绍</label>
+    <label class="col-md-2 control-label">产品参数</label>
     <div class="col-md-8">
-        <?php echo $form->textArea($article, 'content', array('id'=>'ArticleExt_content')); ?>
+        <?php echo $form->textArea($article, 'cs', array('id'=>'ArticleExt_content1')); ?>
     </div>
-    <div class="col-md-2"><?php echo $form->error($article, 'content')  ?></div>
+    <div class="col-md-2"><?php echo $form->error($article, 'cs')  ?></div>
 </div>
 <div class="form-group">
     <label class="col-md-2 control-label text-nowrap">封面图</label>
