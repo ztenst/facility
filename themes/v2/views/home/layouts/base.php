@@ -23,18 +23,22 @@
             padding-top: 86px
         }
     </style>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $('.fixed').next().remove();
+    });
+</script>
 </head>
 
 <body class="<?=$this->banner?>">
-    <div id="header" class="<?=$this->banner?'':'index_nav'?>">
+<div id="header" class="<?=$this->banner?'':'index_nav'?>">
         <div class="wrapper">
             <div class="content">
                 <div id="headTop">
-                    <a href="#" id="logo"><img src="http://resources.jsmo.xin/templates/upload/1400/201612/1482817831886.png" height="44" /></a>
+                    <a href="<?=$this->createUrl('/home/index/index')?>" id="logo" style="height: 60px"><img src="<?=Yii::app()->theme->baseUrl.'/static/home/images/logo.gif'?>" width="220" height="50" /></a>
                     <div id="hcontact" class="fr"><i class="fa fa-phone"></i>
-                        <p>88888888888
-                            <br />
-                            <a href="mailto:0008008@qq.com">0008008@qq.com</a></p>
+                        <p><?=SiteExt::getAttr('qjpz','sitePhone')?>
+                            <br /><a href="<?=SiteExt::getAttr('qjpz','mail')?>"><?=SiteExt::getAttr('qjpz','mail')?></a></p>
                     </div>
                     <div id="openBtn" class="fl btn">
                         <div class="lcbody">
@@ -50,19 +54,18 @@
                 <div id="navWrapper">
                     <div class="content">
                         <p class="search_but" style="display:none"><i class="fa fa-search" aria-hidden="true"></i></p>
-                        <ul class="nav">
-                            <li class="navitem"><a class="active" href="#" target="_self"><span data-title="首页">首页</span></a></li>
-                            <li class="navitem"><a href="http://mo005-1563.mo5.line1.jsmo.xin/" target="_blank"><span data-title="黑色单屏版">黑色单屏版</span></a></li>
-                            <li class="navitem"><a href="#list/id/11111/" target="_self"><span data-title="业务服务">业务服务</span></a></li>
-                            <li class="navitem"><a href="#list/id/11061/" target="_self"><span data-title="项目案例">项目案例</span></a></li>
+                        <ul class="nav movedx" data-movedx-mid="1">
+                            <li class="navitem"><a class="active" href="<?=$this->createUrl('/home/index/index')?>" target="_self"><span data-title="首页">首页</span></a></li>
+                            <li class="navitem"><a href="<?=$this->createUrl('home/serve/index')?>" target="_self"><span data-title="服务中心">服务中心</span></a></li>
+                            <li class="navitem"><a href="<?=$this->createUrl('home/serve/index')?>" target="_self"><span data-title="业务中心">业务中心</span></a></li>
+                            <li class="navitem"><a href="<?=$this->createUrl('home/product/list')?>" target="_self"><span data-title="设备中心">设备中心</span></a></li>
                             <li class="navitem"><a href="javascript:;" target=""><span data-title="关于我们">关于我们</span><i class="fa fa-angle-down"></i></a>
                                 <ul class="subnav">
-                                    <li><a href="#page/about/" target="_self">集团简介</a></li>
-                                    <li><a href="#list/id/11283/" target="_self">合作伙伴</a></li>
+                                    <li><a href="http://mo005-1400.mo5.line1.uemo.net/page/about/" target="_self">集团简介</a></li>
+                                    <li><a href="http://mo005-1400.mo5.line1.uemo.net/list/id/11283/" target="_self">合作伙伴</a></li>
                                 </ul>
                             </li>
-                            <li class="navitem"><a href="#list/id/11067/" target="_self"><span data-title="资讯中心">资讯中心</span></a></li>
-                            <li class="navitem"><a href="#page/contact/" target="_self"><span data-title="联系我们">联系我们</span></a></li>
+                            <li class="navitem"><a href="http://mo005-1400.mo5.line1.uemo.net/page/contact/" target="_self"><span data-title="联系我们">联系我们</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -73,8 +76,7 @@
                             <div class="s_wrapper">
                                 <p class="s_submit"><i class="fa fa-search" aria-hidden="true"></i></p>
                                 <input type="text" aria-label="搜索" placeholder="搜索" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" />
-                                <p class="s_close"><i class="fa fa-times" aria-hidden="true"></i>
-                                </p>
+                                <p class="s_close"><i class="fa fa-times" aria-hidden="true"></i></p>
                             </div>
                         </form>
                     </div>
@@ -84,37 +86,29 @@
     </div>
     <?=$content?>
     <div id="footer">
-        <p><span class="ellipsis">COPYRIGHT (©) 2017  mo005_1400 - 企业类模板. </span>
+        <p><span class="ellipsis">COPYRIGHT (©) 2017  上海弘钢机械设备有限公司. </span>
             <a class="beian" href="http://www.miitbeian.gov.cn/" style="color: #363636;vertical-align: top;margin-left: 10px;display: inline-block;" target="_blank"></a>
         </p>
     </div>
-    <div id="shares"><a href="http://service.weibo.com/share/share.php?appkey=3206975293&" target="_blank" id="sweibo"><i class="fa fa-weibo"></i></a><a href="javascript:;" id="sweixin"><i class="fa fa-mobile"></i></a><a href="javascript:;" id="gotop"><i class="fa fa-angle-up"></i></a></div>
-    <div class="fixed" id="fixed_weixin">
-        <div class="fixed-container">
-            <div id="qrcode"></div>
-            <p>扫描二维码分享到微信</p>
-        </div>
-    </div>
+    <div id="shares"><a href="http://service.weibo.com/share/share.php?appkey=3206975293&" target="_blank" id="sweibo"><i class="fa fa-weibo"></i></a><a href="javascript:;" id="gotop"><i class="fa fa-angle-up"></i></a></div>
     <div id="online_open"><i class="fa fa-comments-o"></i></div>
     <div id="online_lx">
         <div id="olx_head">在线咨询<i class="fa fa-times fr" id="online_close"></i></div>
         <ul id="olx_qq">
-            <li><a href="tencent://message/?uin=40080000&Site=uelike&Menu=yes"><i class="fa fa-qq"></i>40080000</a></li>
+            <li><a href="tencent://message/?uin=<?=SiteExt::getAttr('qjpz','qq')?>&Site=uelike&Menu=yes"><i class="fa fa-qq"></i><?=SiteExt::getAttr('qjpz','qq')?></a></li>
         </ul>
         <div id="olx_tel">
             <div><i class="fa fa-phone"></i>联系电话</div>
-            <p>88888888888
+            <p><?=SiteExt::getAttr('qjpz','sitePhone')?>
                 <br />
             </p>
         </div>
     </div>
-    <div class="hide">
-        <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261416854'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261416854' type='text/javascript'%3E%3C/script%3E"));</script>
-    </div>
 </body>
 <script type="text/javascript">
     $(document).ready(function(){
-        $('.fixed').next().remove();
-    });
+                $('.hide').next().remove();
+            });
 </script>
+
 </html>
