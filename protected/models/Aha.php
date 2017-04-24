@@ -1,75 +1,108 @@
-<?php 
+<?php
+
 /**
- * 相册类
- * @author steven.allen <[<email address>]>
- * @date(2017.2.5)
+ * This is the model class for table "aha".
+ *
+ * The followings are the available columns in table 'aha':
+ * @property integer $id
+ * @property string $name
+ * @property integer $cid
+ * @property string $content
+ * @property integer $created
+ * @property integer $updated
  */
-class AhaExt extends Aha{
+class Aha extends CActiveRecord
+{
 	/**
-     * 定义关系
-     */
-    public function relations()
-    {
-        return array(
-            // 'baike'=>array(self::BELONGS_TO, 'BaikeExt', 'bid'),
-        );
-    }
+	 * @return string the associated database table name
+	 */
+	public function tableName()
+	{
+		return 'aha';
+	}
 
-    /**
-     * @return array 验证规则
-     */
-    public function rules() {
-        $rules = parent::rules();
-        return array_merge($rules, array(
-            // array('name', 'unique', 'message'=>'{attribute}已存在')
-        ));
-    }
+	/**
+	 * @return array validation rules for model attributes.
+	 */
+	public function rules()
+	{
+		// NOTE: you should only define rules for those attributes that
+		// will receive user inputs.
+		return array(
+			array('created', 'required'),
+			array('cid, created, updated', 'numerical', 'integerOnly'=>true),
+			array('name', 'length', 'max'=>255),
+			array('content', 'safe'),
+			// The following rule is used by search().
+			// @todo Please remove those attributes that should not be searched.
+			array('id, name, cid, content, created, updated', 'safe', 'on'=>'search'),
+		);
+	}
 
-    /**
-     * 返回指定AR类的静态模型
-     * @param string $className AR类的类名
-     * @return CActiveRecord Admin静态模型
-     */
-    public static function model($className = __CLASS__) {
-        return parent::model($className);
-    }
+	/**
+	 * @return array relational rules.
+	 */
+	public function relations()
+	{
+		// NOTE: you may need to adjust the relation name and the related
+		// class name for the relations automatically generated below.
+		return array(
+		);
+	}
 
-    public function afterFind() {
-        parent::afterFind();
-    }
+	/**
+	 * @return array customized attribute labels (name=>label)
+	 */
+	public function attributeLabels()
+	{
+		return array(
+			'id' => 'ID',
+			'name' => 'Name',
+			'cid' => 'Cid',
+			'content' => 'Content',
+			'created' => 'Created',
+			'updated' => 'Updated',
+		);
+	}
 
-    public function beforeValidate() {
-        if($this->getIsNewRecord())
-            $this->created = $this->updated = time();
-        else
-            $this->updated = time();
-        return parent::beforeValidate();
-    }
+	/**
+	 * Retrieves a list of models based on the current search/filter conditions.
+	 *
+	 * Typical usecase:
+	 * - Initialize the model fields with values from filter form.
+	 * - Execute this method to get CActiveDataProvider instance which will filter
+	 * models according to data in model fields.
+	 * - Pass data provider to CGridView, CListView or any similar widget.
+	 *
+	 * @return CActiveDataProvider the data provider that can return the models
+	 * based on the search/filter conditions.
+	 */
+	public function search()
+	{
+		// @todo Please modify the following code to remove attributes that should not be searched.
 
-    /**
-     * 命名范围
-     * @return array
-     */
-    public function scopes()
-    {
-        $alias = $this->getTableAlias();
-        return array(
-            'sorted' => array(
-                'order' => 'sort desc',
-            )
-        );
-    }
-    /**
-     * 绑定行为类
-     */
-    public function behaviors() {
-        return array(
-            'CacheBehavior' => array(
-                'class' => 'application.behaviors.CacheBehavior',
-                'cacheExp' => 0, //This is optional and the default is 0 (0 means never expire)
-                'modelName' => __CLASS__, //This is optional as it will assume current model
-            ),
-            'BaseBehavior'=>'application.behaviors.BaseBehavior',
-        );
-    }
+		$criteria=new CDbCriteria;
+
+		$criteria->compare('id',$this->id);
+		$criteria->compare('name',$this->name,true);
+		$criteria->compare('cid',$this->cid);
+		$criteria->compare('content',$this->content,true);
+		$criteria->compare('created',$this->created);
+		$criteria->compare('updated',$this->updated);
+
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		));
+	}
+
+	/**
+	 * Returns the static model of the specified AR class.
+	 * Please note that you should have this exact method in all your CActiveRecord descendants!
+	 * @param string $className active record class name.
+	 * @return Aha the static model class
+	 */
+	public static function model($className=__CLASS__)
+	{
+		return parent::model($className);
+	}
 }
