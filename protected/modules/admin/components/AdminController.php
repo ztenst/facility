@@ -72,6 +72,8 @@ class AdminController extends Controller
             ['label'=>'标签管理','icon'=>'icon-speedometer','url'=>['/admin/tag/list'],'active'=>$this->route=='vip/tag/edit'],
             ['label'=>'用户采集','icon'=>'icon-speedometer','url'=>['/admin/user/list']],
             ['label'=>'站点配置','icon'=>'icon-speedometer','url'=>['/admin/site/list'],'active'=>$this->route=='vip/site/edit'||$this->route=='vip/site/list'],
+            ['label'=>'ahalist','icon'=>'icon-speedometer','url'=>['/admin/aha/list']],
+
             
         ];
     }
