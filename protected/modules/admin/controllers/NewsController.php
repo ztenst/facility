@@ -8,14 +8,22 @@ class NewsController extends AdminController{
 
 	public $cates = [];
 
+	/**
+	 *相当于构造方法
+	 */
 	public function init()
 	{
 		parent::init();
 		$this->cates = CHtml::listData(TagExt::model()->getTagByCate('wzlm')->normal()->findAll(),'id','name');
 	}
-
+	/**
+	 * 文章列表
+	 */
 	public function actionList($type='title',$value='',$time_type='created',$time='',$cate='')
 	{
+		/**
+		 * yii的db操作可以通过criteria类 用法超级简单
+		 */
 		$criteria = new CDbCriteria;
 		$criteria->order = 'sort desc,updated desc';
 		$criteria->addCondition('deleted=0');
@@ -39,8 +47,10 @@ class NewsController extends AdminController{
 			$criteria->addCondition('cid=:cid');
 			$criteria->params[':cid'] = $cate;
 		}
+		//这个相当于M()->selecte当时封装了分页
+		//其中 news->data是数据 news->pageination是分页
 		$news = ArticleExt::model()->getList($criteria,20);
-		
+		// 这个是渲染页面
 		$this->render('list',[
 			'cates'=>$this->cates,
 			'news'=>$news->data,
