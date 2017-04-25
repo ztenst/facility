@@ -23,11 +23,6 @@
             padding-top: 86px
         }
     </style>
-    <script type="text/javascript">
-    $(document).ready(function(){
-        $('.fixed').next().remove();
-    });
-</script>
 </head>
 
 <body class="<?=$this->banner?>">
@@ -35,7 +30,7 @@
         <div class="wrapper">
             <div class="content">
                 <div id="headTop">
-                    <a href="<?=$this->createUrl('/home/index/index')?>" id="logo" style="height: 60px"><img src="<?=Yii::app()->theme->baseUrl.'/static/home/images/logo.gif'?>" width="220" height="50" /></a>
+                    <a href="<?=$this->createUrl('/home/index/index')?>" id="logo" style="height: 40"><img src="<?=ImageTools::fixImage(SiteExt::getAttr('qjpz','pcLogo'))?>" width="220" height="40" /></a>
                     <div id="hcontact" class="fr"><i class="fa fa-phone"></i>
                         <p><?=SiteExt::getAttr('qjpz','sitePhone')?>
                             <br /><a href="<?=SiteExt::getAttr('qjpz','mail')?>"><?=SiteExt::getAttr('qjpz','mail')?></a></p>
@@ -50,22 +45,22 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div><?php $path = trim(Yii::app()->request->getPathInfo(),'/');?>
                 <div id="navWrapper">
                     <div class="content">
                         <p class="search_but" style="display:none"><i class="fa fa-search" aria-hidden="true"></i></p>
                         <ul class="nav movedx" data-movedx-mid="1">
-                            <li class="navitem"><a class="active" href="<?=$this->createUrl('/home/index/index')?>" target="_self"><span data-title="首页">首页</span></a></li>
-                            <li class="navitem"><a href="<?=$this->createUrl('home/serve/index')?>" target="_self"><span data-title="服务中心">服务中心</span></a></li>
-                            <li class="navitem"><a href="<?=$this->createUrl('home/serve/index')?>" target="_self"><span data-title="业务中心">业务中心</span></a></li>
-                            <li class="navitem"><a href="<?=$this->createUrl('home/product/list')?>" target="_self"><span data-title="设备中心">设备中心</span></a></li>
+                            <li class="navitem"><a class="<?=$path=='home/index/index'?'active':''?>" href="<?=$this->createUrl('/home/index/index')?>" target="_self"><span data-title="首页">首页</span></a></li>
+                            <li class="navitem"><a class="<?=$path=='home/serve/index'?'active':''?>" href="<?=$this->createUrl('/home/serve/index')?>" target="_self"><span data-title="服务中心">服务中心</span></a></li>
+                            <li class="navitem"><a class="<?=$path=='home/serve/info'?'active':''?>"  href="<?=$this->createUrl('/home/serve/info')?>" target="_self"><span data-title="业务中心">业务中心</span></a></li>
+                            <li class="navitem"><a class="<?=$path=='home/product/list'?'active':''?>" href="<?=$this->createUrl('/home/product/list')?>" target="_self"><span data-title="设备中心">设备中心</span></a></li>
                             <li class="navitem"><a href="javascript:;" target=""><span data-title="关于我们">关于我们</span><i class="fa fa-angle-down"></i></a>
                                 <ul class="subnav">
                                     <li><a href="http://mo005-1400.mo5.line1.uemo.net/page/about/" target="_self">集团简介</a></li>
                                     <li><a href="http://mo005-1400.mo5.line1.uemo.net/list/id/11283/" target="_self">合作伙伴</a></li>
                                 </ul>
                             </li>
-                            <li class="navitem"><a href="http://mo005-1400.mo5.line1.uemo.net/page/contact/" target="_self"><span data-title="联系我们">联系我们</span></a></li>
+                            <li class="navitem"><a class="<?=$path=='home/contact/index'?'active':''?>" href="<?=$this->createUrl('/home/contact/index')?>" target="_self"><span data-title="联系我们">联系我们</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -84,7 +79,30 @@
             </div>
         </div>
     </div>
+    <div id="sitecontent">
+        
+        <script>
+        $(function() {
+            $('#navWrapper .search_but').click(function() {
+                $("#search").show().animate({
+                    left: 0,
+                    opacity: 1
+                }, 500);
+                $("#navWrapper").hide();
+                $("#headTop").hide();
+            });
+            $('#search .s_close').click(function() {
+                $("#search").show().animate({
+                    left: $("#search").width() * 1.2,
+                    opcity: 0
+                }, 500);
+                $("#navWrapper").show();
+                $("#headTop").show();
+            });
+        });
+        </script>
     <?=$content?>
+    </div>
     <div id="footer">
         <p><span class="ellipsis">COPYRIGHT (©) 2017  上海弘钢机械设备有限公司. </span>
             <a class="beian" href="http://www.miitbeian.gov.cn/" style="color: #363636;vertical-align: top;margin-left: 10px;display: inline-block;" target="_blank"></a>
@@ -107,6 +125,7 @@
 </body>
 <script type="text/javascript">
     $(document).ready(function(){
+        // debugger;
                 $('.hide').next().remove();
             });
 </script>

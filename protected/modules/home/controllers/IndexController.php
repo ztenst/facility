@@ -9,6 +9,18 @@ class IndexController extends HomeController
     	$serves = ArticleExt::model()->normal()->findAll(['condition'=>'cid=44','limit'=>6]);
     	// 八个设备
     	$products = ProductExt::model()->normal()->findAll(['limit'=>8]);
+        if(Yii::app()->request->getIsPostRequest()) {
+
+            $data['name'] = Yii::app()->request->getPost('name');
+            $data['mail'] = Yii::app()->request->getPost('email');
+            $data['phone'] = Yii::app()->request->getPost('tel');
+            $data['msg'] = Yii::app()->request->getPost('content');
+            $guest = new GuestExt;
+            $guest->attributes = $data;
+            $guest->save();
+            echo json_encode(['code'=>0,'data'=>'']);
+            Yii::app()->end();
+        }
         $this->render('index',['serves'=>$serves,'products'=>$products]);
     }
 }
