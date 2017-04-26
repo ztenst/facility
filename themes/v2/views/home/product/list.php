@@ -6,7 +6,7 @@
             </div> -->
             <div id="pageTarget" class="module">
                 <div class="module_container">
-                    <div class="container_target wow">您的位置：<a href="<?=$this->createUrl('/home/index/index')?>">首页</a><i class="fa fa-angle-right"></i><a href="#">设备列表</a></div>
+                    <div class="container_target wow">您的位置：<a href="<?=$this->createUrl('/home/index/index')?>">首页</a><i class="fa fa-angle-right"></i><a href="#"><?=$cate==50?'设备租赁':'设备列表'?></a></div>
                     <div class="clear"></div>
                 </div>
             </div>
@@ -14,9 +14,9 @@
                 <div class="mlist project module" style="">
                     <div class="bgmask"></div>
                     <div class="module_container">
-                        <div class="container_category wow"><?php if($cates = TagExt::getTagArrayByCate('hjlx')) foreach ($cates as $key => $value) {?>
+                        <div class="container_category wow"><?php if($cates = TagExt::getTagArrayByCate('hjlx')) foreach ($cates as $key => $value) { if($cate!=50){ ?>
                         <a class="<?=$cate==$key?'active':''?>" href="<?=$this->createUrl('/home/product/list',['cate'=>$key])?>"><?=$value?></a>
-                    <?php } ?>
+                    <?php  } } ?>
                         </div>
                         <div class="container_content">
                             <div class="content_wrapper">

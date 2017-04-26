@@ -122,49 +122,7 @@
                     <div class="clear"></div>
                 </div>
             </div>
-            <div class="mcustomize module bgShow bgParallax" style=" background-image:url(http://resources.jsmo.xin/templates/upload/1400/201701/1484030897347.jpg);">
-                <div class="bgmask"></div>
-                <div class="module_container">
-                    <div class="container_content">
-                        <div class="contentbody">
-                            <div class="wrapper">
-                                <div class="header wow">
-                                    <p class="title">关于我们</p>
-                                    <p class="subtitle">ABOUT US</p>
-                                </div>
-                                <div class="description wow">
-                                    <p style="text-align: center;"><span style="font-size: 14px;">上海弘钢机械设备有限公司是一家专业从事机械设备科技领域的技术开发、技术咨询、技术转让、技术服务、建筑安装工程、机械设备租赁、汽车租赁、、机电成套设备销售、人力装卸服务及机电设备安装，建筑装饰装修建设工程设计施工一体化。</span></p>
-                                    <p><span style="font-size: 14px;"><br/></span></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="mcustomize module bgShow bgParallax" style=" background-image:url(http://resources.jsmo.xin/templates/upload/1400/201612/1481793511357.jpg);">
-                <div class="bgmask"></div>
-                <div class="module_container">
-                    <div class="container_content">
-                        <div class="contentbody">
-                            <div class="wrapper">
-                                <div class="description wow">
-                                    <p style="text-align: center;"><span style="font-size: 20px;"><br/></span></p>
-                                    <p><span style="font-size: 20px;"><br/></span></p>
-                                    <p style="text-align: center;"><span style="font-size: 24px; color: rgb(255, 255, 255);">如果你<strong> </strong></span><span style="font-size: 24px; color: rgb(255, 255, 255); text-decoration: none;">想要</span><span style="font-size: 24px; color: rgb(255, 255, 255);">更多的<span style="font-size: 24px; color: rgb(0, 176, 240);">了解</span>，请联系我们 <?=SiteExt::getAttr('qjpz','sitePhone')?></span>
-                                    </p>
-                                    <p style="text-align: center;"><span style="font-size: 12px; color: rgb(191, 191, 191);">If you want more understanding, please contact us</span>
-                                        <br/>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
-                </div>
-            </div>
-            <div id="mcontact" class="module" style="">
+             <div id="mcontact" class="module" style="">
                 <div class="module_container">
                     <div class="container_header wow">
                         <p class="title">联系我们</p>
@@ -208,4 +166,26 @@
                     </div>
                 </div>
             </div>
+            <div class="mcustomize module bgShow bgParallax" style=" background-image:url(http://resources.jsmo.xin/templates/upload/1400/201612/1481793511357.jpg);">
+                <div class="bgmask"></div>
+                <div class="module_container">
+                    <div class="container_content">
+                        <div class="contentbody">
+                            <div class="wrapper">
+                                <div class="description wow">
+                                    <p style="text-align: center;"><span style="font-size: 20px;"><br/></span></p>
+                                    <p><span style="font-size: 20px;"><br/></span></p>
+                                    <p style="text-align: center;"><span style="font-size: 24px; color: rgb(255, 255, 255);">如果你<strong> </strong></span><span style="font-size: 24px; color: rgb(255, 255, 255); text-decoration: none;">想要</span><span style="font-size: 24px; color: rgb(255, 255, 255);">更多的<span style="font-size: 24px; color: rgb(0, 176, 240);">了解</span>，请联系我们 <?=SiteExt::getAttr('qjpz','sitePhone')?></span>
+                                    </p>
+                                    <p style="text-align: center;"><span style="font-size: 12px; color: rgb(191, 191, 191);">If you want more understanding, please contact us</span>
+                                        <br/>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+           
         </div>

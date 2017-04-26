@@ -54,6 +54,7 @@
                             <li class="navitem"><a class="<?=$path=='home/serve/index'?'active':''?>" href="<?=$this->createUrl('/home/serve/index')?>" target="_self"><span data-title="服务中心">服务中心</span></a></li>
                             <li class="navitem"><a class="<?=$path=='home/serve/info'?'active':''?>"  href="<?=$this->createUrl('/home/serve/info')?>" target="_self"><span data-title="业务中心">业务中心</span></a></li>
                             <li class="navitem"><a class="<?=$path=='home/product/list'?'active':''?>" href="<?=$this->createUrl('/home/product/list')?>" target="_self"><span data-title="设备中心">设备中心</span></a></li>
+                            <li class="navitem"><a class="<?=$path=='home/rent/list'?'active':''?>" href="<?=$this->createUrl('/home/rent/list')?>" target="_self"><span data-title="设备租赁">设备租赁</span></a></li>
                             <li class="navitem"><a href="javascript:;" target=""><span data-title="关于我们">关于我们</span><i class="fa fa-angle-down"></i></a>
                                 <ul class="subnav">
                                     <li><a href="<?=$this->createUrl('/home/index/about')?>" target="_self">集团简介</a></li>
