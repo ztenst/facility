@@ -1,53 +1,12 @@
 <?php
   $this->pageTitle = '弘钢机械设备-首页';
 ?>
-<div id="sitecontent">
-        <div id="navMini">
-            <div id="navMiniTable">
-                <div id="navMiniCell">
-                    <ul class="nav">
-                        <li class="navitem"><a class="active" href="http://mo005-1400.mo5.line1.uemo.net/" target="_self">首页</a></li>
-                        <li class="navitem"><a href="http://mo005-1563.mo5.line1.jsmo.xin/" target="_blank">黑色单屏版</a></li>
-                        <li class="navitem"><a href="http://mo005-1400.mo5.line1.uemo.net/list/id/11111/" target="_self">业务服务</a></li>
-                        <li class="navitem"><a href="http://mo005-1400.mo5.line1.uemo.net/list/id/11061/" target="_self">项目案例</a></li>
-                        <li class="navitem"><a href="javascript:;" target="">关于我们<i class="fa fa-angle-down"></i></a>
-                            <ul class="subnav">
-                                <li><a href="http://mo005-1400.mo5.line1.uemo.net/page/about/" target="_self">集团简介</a></li>
-                                <li><a href="http://mo005-1400.mo5.line1.uemo.net/list/id/11283/" target="_self">合作伙伴</a></li>
-                            </ul>
-                        </li>
-                        <li class="navitem"><a href="http://mo005-1400.mo5.line1.uemo.net/list/id/11067/" target="_self">资讯中心</a></li>
-                        <li class="navitem"><a href="http://mo005-1400.mo5.line1.uemo.net/page/contact/" target="_self">联系我们</a></li>
-                        <li class="search-but" style=" opacity:0"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <script>
-        $(function() {
-            $('#navWrapper .search_but').click(function() {
-                $("#search").show().animate({
-                    left: 0,
-                    opacity: 1
-                }, 500);
-                $("#navWrapper").hide();
-                $("#headTop").hide();
-            });
-            $('#search .s_close').click(function() {
-                $("#search").show().animate({
-                    left: $("#search").width() * 1.2,
-                    opcity: 0
-                }, 500);
-                $("#navWrapper").show();
-                $("#headTop").show();
-            });
-        });
-        </script>
+
         <div id="indexPage" data-scroll-ease="Expo.easeInOut" data-scroll-speed="1" data-control="0" data-control-wheel="0" data-singlescreen="0">
             <div id="topSlider" class="mslider module">
                 <ul class="content_list"  style="height:527px">
                     <li>
-                        <div class="item_bg image" data-thumb="http://resources.jsmo.xin/templates/upload/1400/201701/148436306592_80x80.jpg" style="background-image:url(http://resources.jsmo.xin/templates/upload/1400/201701/148436306592.jpg)"></div>
+                        <div class="item_bg image" data-thumb="<?=ImageTools::fixImage(SiteExt::getAttr('qjpz','pcImage'))?>" style="background-image:url(<?=ImageTools::fixImage(SiteExt::getAttr('qjpz','pcImage'))?>)"></div>
                         <a target="_blank">
                             <div class="description" style="vertical-align:middle; text-align:right">
                                 <p class="title ellipsis">尺寸1920 X 580</p>
@@ -101,25 +60,25 @@
                         <ul class="content_list">
                             <li>
                                 <div>
-                                    <p class="number"><span class="counterDX" data-counter-value="1912">1912</span><span class="unit">年</span></p>
+                                    <p class="number"><span class="counterDX" data-counter-value="<?=SiteExt::getAttr('qjpz','clnf')?>"><?=SiteExt::getAttr('qjpz','clnf')?></span><span class="unit">年</span></p>
                                     <p class="title">成立</p>
                                 </div>
                             </li>
                             <li>
                                 <div>
-                                    <p class="number"><span class="counterDX" data-counter-value="299">299</span><span class="unit">+</span></p>
+                                    <p class="number"><span class="counterDX" data-counter-value="<?=SiteExt::getAttr('qjpz','fwgs')?>"><?=SiteExt::getAttr('qjpz','fwgs')?></span><span class="unit">+</span></p>
                                     <p class="title">服务</p>
                                 </div>
                             </li>
                             <li>
                                 <div>
-                                    <p class="number"><span class="counterDX" data-counter-value="999">999</span><span class="unit">+</span></p>
+                                    <p class="number"><span class="counterDX" data-counter-value="<?=SiteExt::getAttr('qjpz','xmgs')?>"><?=SiteExt::getAttr('qjpz','xmgs')?></span><span class="unit">+</span></p>
                                     <p class="title">项目</p>
                                 </div>
                             </li>
                             <li>
                                 <div>
-                                    <p class="number"><span class="counterDX" data-counter-value="2016">2016</span><span class="unit">+</span></p>
+                                    <p class="number"><span class="counterDX" data-counter-value="<?=SiteExt::getAttr('qjpz','khs')?>"><?=SiteExt::getAttr('qjpz','khs')?></span><span class="unit">+</span></p>
                                     <p class="title">客户</p>
                                 </div>
                             </li>
@@ -224,7 +183,7 @@
                                     <p class="ellipsis">邮箱：yanan_76@sina.com</p>
                                     <div><a class="fl" target="_blank" href="http://weibo.com/web"><i class="fa fa-weibo"></i></a><a class="fl" target="_blank" href="tencent://message/?uin=<?=SiteExt::getAttr('qjpz','qq')?> &Site=uemo&Menu=yes"><i class="fa fa-qq"></i></a> </div>
                                 </div>
-                                <div id="contactform" class="wow">
+                                <div id="contactform" style="margin-left: 40%;" class="wow">
                                     <form action="" method="post">
                                         <p>
                                             <input type="text" class="inputtxt" name="name" placeholder="姓名" autocomplete="off" />
@@ -250,4 +209,3 @@
                 </div>
             </div>
         </div>
-    </div>

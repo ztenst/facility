@@ -27,22 +27,22 @@ class SiteExt extends Site{
         'pcIndexNews'=>'',
         // pc首页关于背景图
         'pcIndexAbout'=>'',
-        // pc首页服务背景图
-        'pcIndexServe'=>'',
-        // pc首页关于
-        'pcIndexAboutText'=>'',
+        // pc联系我们头图
+        'pcContact'=>'',
+        // pc公司介绍头图
+        'pcGsjs'=>'',
         // pc资讯列表头图
         'pcNewsTop'=>'',
-        // pc联系列表头图
-        'pcContactTop'=>'',
-        // pc服务列表头图
-        'pcServeTop'=>'',
-        // pc团队列表头图
-        'pcTeamTop'=>'',
-        // 产品默认图
-        'productNoPic'=>'',
-        // 酒庄默认图
-        'houseNoPic'=>'',
+        // pc头图
+        'pcImage'=>'',
+        // 客户数
+        'khs'=>'0',
+        // 项目个数
+        'xmgs'=>'0',
+        // 服务个数
+        'fwgs'=>'0',
+        // 成立年份
+        'clnf'=>'0',
 
     ];
     public static $cateName = [
@@ -57,9 +57,13 @@ class SiteExt extends Site{
             'sitePhone'=>['type'=>'text','name'=>'站点客服'],
             'qq'=>['type'=>'text','name'=>'联系qq'],
             'mail'=>['type'=>'text','name'=>'邮箱'],
-            // 'pcIndexAboutText'=>['type'=>'text','name'=>'pc首页关于'],
-            // 'wxQr'=>['type'=>'image','max'=>1,'name'=>'微信二维码'],
-            // 'staffQr'=>['type'=>'image','max'=>1,'name'=>'销售微信二维码'],
+            'khs'=>['type'=>'text','name'=>'客户数'],
+            'xmgs'=>['type'=>'text','name'=>'项目个数'],
+            'fwgs'=>['type'=>'text','name'=>'服务个数'],
+            'clnf'=>['type'=>'text','name'=>'成立年份'],
+            'pcContact'=>['type'=>'image','max'=>1,'name'=>'pc联系我们头图'],
+            'pcImage'=>['type'=>'image','max'=>1,'name'=>'pc头图'],
+            'pcGsjs'=>['type'=>'image','max'=>1,'name'=>'pc公司介绍头图'],
             // 'pcIndexNews'=>['type'=>'image','max'=>1,'name'=>'pc首页新闻背景图'],
             // 'pcIndexAbout'=>['type'=>'image','max'=>1,'name'=>'pc首页关于背景图'],
             // 'pcIndexServe'=>['type'=>'image','max'=>1,'name'=>'pc首页服务背景图'],

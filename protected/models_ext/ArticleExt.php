@@ -80,7 +80,7 @@ class ArticleExt extends Article{
                 'order' => 'sort desc',
             ),
             'normal' => array(
-                'condition' => 'status=1',
+                'condition' => 'status=1 and deleted=0',
                 'order' => 'sort desc',
             ),
         );
@@ -100,22 +100,42 @@ class ArticleExt extends Article{
         );
     }
 
-    public function getTeam()
+    public function getYw()
     {
         $this->getDbCriteria()->mergeWith(array(
             'condition' => 'cid=:cate',
-            'order' => 'id ASC',
-            'params' => array(':cate'=>'19')
+            // 'order' => 'id ASC',
+            'params' => array(':cate'=>'44')
         ));
         return $this;
     }
 
-    public function getServe()
+    public function getFw()
     {
         $this->getDbCriteria()->mergeWith(array(
             'condition' => 'cid=:cate',
-            'order' => 'id ASC',
-            'params' => array(':cate'=>'20')
+            // 'order' => 'id ASC',
+            'params' => array(':cate'=>'45')
+        ));
+        return $this;
+    }
+
+    public function getJs()
+    {
+        $this->getDbCriteria()->mergeWith(array(
+            'condition' => 'cid=:cate',
+            // 'order' => 'id ASC',
+            'params' => array(':cate'=>'51')
+        ));
+        return $this;
+    }
+
+    public function getLx()
+    {
+        $this->getDbCriteria()->mergeWith(array(
+            'condition' => 'cid=:cate',
+            // 'order' => 'id ASC',
+            'params' => array(':cate'=>'52')
         ));
         return $this;
     }
