@@ -168,6 +168,7 @@ $config1 = array(
                 'baike/l<cid:\d+>' =>'home/baike/list',
                 'baike/<id:\d+>.html' => 'home/baike/detail',
                 'home/baike/<a:\w+>' => 'home/baike/<a>',
+                'home/rent/list' => 'home/product/list/cate/50',
                 //买房顾问
                 'maifangguwen' => 'home/adviser/index',
                 //前台资讯
