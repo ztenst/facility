@@ -120,6 +120,26 @@ class ArticleExt extends Article{
         return $this;
     }
 
+    public function getJs()
+    {
+        $this->getDbCriteria()->mergeWith(array(
+            'condition' => 'cid=:cate',
+            // 'order' => 'id ASC',
+            'params' => array(':cate'=>'51')
+        ));
+        return $this;
+    }
+
+    public function getLx()
+    {
+        $this->getDbCriteria()->mergeWith(array(
+            'condition' => 'cid=:cate',
+            // 'order' => 'id ASC',
+            'params' => array(':cate'=>'52')
+        ));
+        return $this;
+    }
+
     public function getNormal()
     {
         $this->getDbCriteria()->mergeWith(array(

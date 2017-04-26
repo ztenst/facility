@@ -56,11 +56,10 @@
                             <li class="navitem"><a class="<?=$path=='home/product/list'?'active':''?>" href="<?=$this->createUrl('/home/product/list')?>" target="_self"><span data-title="设备中心">设备中心</span></a></li>
                             <li class="navitem"><a href="javascript:;" target=""><span data-title="关于我们">关于我们</span><i class="fa fa-angle-down"></i></a>
                                 <ul class="subnav">
-                                    <li><a href="http://mo005-1400.mo5.line1.uemo.net/page/about/" target="_self">集团简介</a></li>
-                                    <li><a href="http://mo005-1400.mo5.line1.uemo.net/list/id/11283/" target="_self">合作伙伴</a></li>
+                                    <li><a href="<?=$this->createUrl('/home/index/about')?>" target="_self">集团简介</a></li>
+                                    <li><a href="<?=$this->createUrl('/home/index/contact')?>" target="_self"><span data-title="联系我们">联系我们</span></a></li>
                                 </ul>
                             </li>
-                            <li class="navitem"><a class="<?=$path=='home/contact/index'?'active':''?>" href="<?=$this->createUrl('/home/contact/index')?>" target="_self"><span data-title="联系我们">联系我们</span></a></li>
                         </ul>
                     </div>
                 </div>

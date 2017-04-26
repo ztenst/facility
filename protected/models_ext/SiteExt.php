@@ -27,10 +27,10 @@ class SiteExt extends Site{
         'pcIndexNews'=>'',
         // pc首页关于背景图
         'pcIndexAbout'=>'',
-        // pc首页服务背景图
-        'pcIndexServe'=>'',
-        // pc首页关于
-        'pcIndexAboutText'=>'',
+        // pc联系我们头图
+        'pcContact'=>'',
+        // pc公司介绍头图
+        'pcGsjs'=>'',
         // pc资讯列表头图
         'pcNewsTop'=>'',
         // pc头图
@@ -61,9 +61,9 @@ class SiteExt extends Site{
             'xmgs'=>['type'=>'text','name'=>'项目个数'],
             'fwgs'=>['type'=>'text','name'=>'服务个数'],
             'clnf'=>['type'=>'text','name'=>'成立年份'],
-            // 'pcIndexAboutText'=>['type'=>'text','name'=>'pc首页关于'],
+            'pcContact'=>['type'=>'image','max'=>1,'name'=>'pc联系我们头图'],
             'pcImage'=>['type'=>'image','max'=>1,'name'=>'pc头图'],
-            // 'staffQr'=>['type'=>'image','max'=>1,'name'=>'销售微信二维码'],
+            'pcGsjs'=>['type'=>'image','max'=>1,'name'=>'pc公司介绍头图'],
             // 'pcIndexNews'=>['type'=>'image','max'=>1,'name'=>'pc首页新闻背景图'],
             // 'pcIndexAbout'=>['type'=>'image','max'=>1,'name'=>'pc首页关于背景图'],
             // 'pcIndexServe'=>['type'=>'image','max'=>1,'name'=>'pc首页服务背景图'],
