@@ -2,7 +2,7 @@
 /**
  * 登录表单模型
  *
- * @author tivon
+ * @author weibaqiu
  * @version 2015-02-27 21:12:17
  */
 class StaffLoginForm extends CFormModel

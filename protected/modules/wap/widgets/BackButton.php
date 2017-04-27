@@ -2,7 +2,7 @@
 /**
  * 返回按钮小物件
  * 适用：v2版房产
- * @author tivon
+ * @author weibaqiu
  * @version 2016-06-08
  */
 class BackButton extends CWidget

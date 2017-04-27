@@ -1,7 +1,7 @@
 <?php
 /**
  * 模块配置
- * @author tivon
+ * @author weibaqiu
  * @date 2015-09-24
  */
 class WapModule extends CWebModule

@@ -2,7 +2,7 @@
 /**
  * wap底部通话浮窗
  * 适用：v2版
- * @author tivon
+ * @author weibaqiu
  * @version 2016-06-13
  */
 class BottomOperate extends CWidget

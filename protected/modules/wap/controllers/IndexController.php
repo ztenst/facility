@@ -18,23 +18,23 @@ class IndexController extends WapController{
     		}
     	} 
     	// 首页轮播图片
-    	$site = SiteExt::model()->getSiteByCate('qjpz')->find();
-    	$images = $site->pcIndexImages;
+    	$images = SiteExt::getAttr('qjpz','pcImage');;
+    	// $images = $site->pcIndexImages;
     	$this->layout = '/layouts/base';
     	// 红酒类型
-    	$cates = CHtml::listData(TagExt::model()->getTagByCate('hjlx')->normal()->findAll(),'id','name');
+    	// $cates = CHtml::listData(TagExt::model()->getTagByCate('hjlx')->normal()->findAll(),'id','name');
     	// 八款红酒
     	$wines = ProductExt::model()->normal()->findAll(['limit'=>8]);
     	// 四个新闻
-    	$news = ArticleExt::model()->getNormal()->sorted()->normal()->findAll(['limit'=>4]);
+    	// $news = ArticleExt::model()->getNormal()->sorted()->normal()->findAll(['limit'=>4]);
     	// 三个团队
-    	$teams = ArticleExt::model()->getTeam()->normal()->findAll(['limit'=>3]);
+    	$teams = ArticleExt::model()->getYw()->normal()->findAll(['limit'=>6]);
         // 三个服务
-        $serves = ArticleExt::model()->getServe()->normal()->findAll();
+        // $serves = ArticleExt::model()->getServe()->normal()->findAll();
         // 八个酒庄
-        $houses = HouseExt::model()->sorted()->findAll(['limit'=>3]);
+        // $houses = HouseExt::model()->sorted()->findAll(['limit'=>3]);
     	// var_dump(SiteExt::getAttr('qjpz','qq'));exit;
-        $this->render('index',['images'=>$images,'cates'=>$cates,'wines'=>$wines,'news'=>$news,'teams'=>$teams,'serves'=>$serves,'houses'=>$houses]);
+        $this->render('index',['images'=>$images,'wines'=>$wines,'teams'=>$teams,]);
     }
 
 }
