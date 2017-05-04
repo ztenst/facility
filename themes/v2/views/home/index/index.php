@@ -8,10 +8,6 @@
                     <li>
                         <div class="item_bg image" data-thumb="<?=ImageTools::fixImage(SiteExt::getAttr('qjpz','pcImage'))?>" style="background-image:url(<?=ImageTools::fixImage(SiteExt::getAttr('qjpz','pcImage'))?>)"></div>
                         <a target="_blank">
-                            <div class="description" style="vertical-align:middle; text-align:right">
-                                <p class="title ellipsis">尺寸1920 X 580</p>
-                                <p class="subtitle"><span style="color:#fff">全新的架构，更好的体验</span></p>
-                            </div>
                         </a>
                     </li>
                 </ul>
@@ -26,7 +22,7 @@
                         <p class="title">业务服务</p>
                         <p class="subtitle">/ SERVICE</p>
                     </div>
-                    <div class="container_category wow movedx one" data-movedx-mid="2" data-movedx-distance="15"><a href="<?=$this->createUrl('/home/serve/list')?>" class="active"><span>全部</span></a></div>
+                    <div class="container_category wow movedx one" data-movedx-mid="2" data-movedx-distance="15"><a href="<?=$this->createUrl('/home/serve/info')?>" class="active"><span>全部</span></a></div>
                     <div class="container_content">
                         <div class="content_wrapper slider" data-slider-num='3' data-slider-loop="1">
                             <ul class="content_list">
@@ -166,7 +162,7 @@
                     </div>
                 </div>
             </div>
-            <div class="mcustomize module bgShow bgParallax" style=" background-image:url(http://resources.jsmo.xin/templates/upload/1400/201612/1481793511357.jpg);">
+            <div class="mcustomize module bgShow bgParallax" style=" background-image:url(<?=ImageTools::fixImage(SiteExt::getAttr('qjpz','pcLxwm'))?>);">
                 <div class="bgmask"></div>
                 <div class="module_container">
                     <div class="container_content">

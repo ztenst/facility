@@ -23,8 +23,8 @@ class SiteExt extends Site{
         'wxQr'=>'',
         // 销售微信二维码
         'staffQr'=>'',
-        // pc首页新闻背景图
-        'pcIndexNews'=>'',
+        // pc联系我们广告图
+        'pcLxwm'=>'',
         // pc首页关于背景图
         'pcIndexAbout'=>'',
         // pc联系我们头图
@@ -64,7 +64,7 @@ class SiteExt extends Site{
             'pcContact'=>['type'=>'image','max'=>1,'name'=>'pc联系我们头图'],
             'pcImage'=>['type'=>'image','max'=>1,'name'=>'pc头图'],
             'pcGsjs'=>['type'=>'image','max'=>1,'name'=>'pc公司介绍头图'],
-            // 'pcIndexNews'=>['type'=>'image','max'=>1,'name'=>'pc首页新闻背景图'],
+            'pcLxwm'=>['type'=>'image','max'=>1,'name'=>'pc联系我们广告图'],
             // 'pcIndexAbout'=>['type'=>'image','max'=>1,'name'=>'pc首页关于背景图'],
             // 'pcIndexServe'=>['type'=>'image','max'=>1,'name'=>'pc首页服务背景图'],
             // 'pcNewsTop'=>['type'=>'image','max'=>1,'name'=>'pc资讯列表头图'],
