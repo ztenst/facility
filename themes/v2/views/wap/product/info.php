@@ -1,8 +1,6 @@
 <?php
   $this->pageTitle = '红酒详情';
 ?>
-<?php $tags = $info->getTagName();?>
-
 <div class="npagePage">
     <div class="content">
         <div id="projectpost">
@@ -14,16 +12,10 @@
             </ul>
             <div class="clear"></div>
             <div class="postbody plr10">
-                <p>特色: <?=$info->td?></p>
-                <p>产地: <?=$tags['area']?$tags['area']:'暂无'?></p>
-                <p>系列: <?=$tags['xl']?$tags['xl']:'暂无'?></p>
-                <p>酒庄: <?=$info->houseInfo?$info->houseInfo->name:'-'?></p>
-                <p>等级: <?=$info->houseInfo?TagExt::getNameByTag($info->houseInfo->level):'-'?></p>
-                <p>价格：￥<?=$info->price?></p>
-                <p>
-                    <br />
-                </p>
-                <p><center><h3>简介</h3></center></p>
+                <p><center><h3>特色</h3></center></p>
+                <br>
+                <p><?=$info->td?></p>
+                <p><center><h3>参数</h3></center></p>
                 <br>
                 <p><?=$info->td?></p>
                 <?php if($images = $info->images): ?>
@@ -35,22 +27,23 @@
                 	<hr></li>
                 <?php } endif;?></ul>
                 <p>
+                <br>
                 <div id="contactform" class="" data-wow-delay=".2s">
                             <form id="f1" method="post" onsubmit="alert('提交成功')">
                                 <p>
-                                    <input style="color:white" id="pname" type="text" class="inputtxt name" name="name" placeholder="姓名" autocomplete="off" />
+                                    <input style="color:grey" id="pname" type="text" class="inputtxt name" name="name" placeholder="姓名" autocomplete="off" />
                                 </p>
                                 <hr>
                                 <p>
-                                    <input style="color:white" type="text" class="inputtxt email" name="email" placeholder="邮箱" autocomplete="off" />
+                                    <input style="color:grey" type="text" class="inputtxt email" name="email" placeholder="邮箱" autocomplete="off" />
                                 </p>
                                 <hr>
                                 <p>
-                                    <input style="color:white" id="pphone" type="text" class="inputtxt tel" name="tel" placeholder="电话" autocomplete="off" />
+                                    <input style="color:grey" id="pphone" type="text" class="inputtxt tel" name="tel" placeholder="电话" autocomplete="off" />
                                 </p>
                                 <hr>
                                 <p>
-                                    <input style="color:white" class="cont" name="content" placeholder="备注" autocomplete="off"></input>
+                                    <input style="color:grey" class="cont" name="content" placeholder="备注" autocomplete="off"></input>
                                 </p>
                                 <hr>
                                 <p>
