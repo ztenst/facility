@@ -30,7 +30,7 @@
         <div class="wrapper">
             <div class="content">
                 <div id="headTop">
-                    <a href="<?=$this->createUrl('/home/index/index')?>" id="logo" style="height: 40"><img src="<?=ImageTools::fixImage(SiteExt::getAttr('qjpz','pcLogo'))?>" width="220" height="40" /></a>
+                    <a href="<?=$this->createUrl('/home/index/index')?>" id="logo" style="height: 70px;margin-top: -16px"><img src="<?=ImageTools::fixImage(SiteExt::getAttr('qjpz','pcLogo'))?>" width="220" height="40" /></a>
                     <div id="hcontact" class="fr"><i class="fa fa-phone"></i>
                         <p><?=SiteExt::getAttr('qjpz','sitePhone')?>
                             <br /><a href="<?=SiteExt::getAttr('qjpz','mail')?>"><?=SiteExt::getAttr('qjpz','mail')?></a></p>

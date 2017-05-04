@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="<?=Yii::app()->theme->baseUrl?>/static/vip/wap/css/animate.min.css">
     <link type="text/css" href="<?=Yii::app()->theme->baseUrl?>/static/vip/wap/css/style.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="<?=Yii::app()->theme->baseUrl?>/static/vip/wap/css/376m.css">
-  <title><?php echo '马德里公馆-'.$this->pageTitle;?></title>
+  <title><?php echo '上海弘钢机械设备-'.$this->pageTitle;?></title>
 </head>
 
 <body class="<?=$this->banner?>">

@@ -10,7 +10,7 @@ class ProductController extends WapController{
 	 * @param  string $house [description]
 	 * @return [type]        [description]
 	 */
-	public function actionList($cate='',$ptpz='',$house='')
+	public function actionList($cate='')
 	{
 		$criteria = new CDbCriteria;
 		$criteria->order = 'sort desc,updated desc';
@@ -19,18 +19,10 @@ class ProductController extends WapController{
 			$criteria->addCondition('cid=:cid');
 			$criteria->params[':cid'] = $cate;
 		}
-		if($ptpz){
-			$criteria->addCondition('ptpz=:cid1');
-			$criteria->params[':cid1'] = $ptpz;
-		}
-		if($house){
-			$criteria->addCondition('house=:cid2');
-			$criteria->params[':cid2'] = $house;
-		}
 		$infos = ProductExt::model()->normal()->getList($criteria,20);
 		$data = $infos->data;
 		$pager = $infos->pagination;
-		$this->render('list',['infos'=>$data,'pager'=>$pager,'cate'=>$cate,'ptpz'=>$ptpz,'house'=>$house]);
+		$this->render('list',['infos'=>$data,'pager'=>$pager,'cate'=>$cate]);
 	}
 	/**
 	 * [actionInfo 产品详情]
@@ -49,7 +41,7 @@ class ProductController extends WapController{
 
     		$guest->attributes = $data;
     		if($guest->save()) {
-    			$this->redirect('info');
+    			$this->redirect('list');
     		}
     	} 
 		$info = ProductExt::model()->findByPk($id);
