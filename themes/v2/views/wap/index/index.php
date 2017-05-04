@@ -69,7 +69,7 @@
             <div id="newslist">
             <?php if($teams) foreach ($teams as $key => $value) {?>
             <div class="newstitem plr10 wow fadeIn" data-wow-delay="0.0s">
-                    <a class="newsinfo" href="<?=$this->createUrl('/home/news/info',['id'=>$value->id])?>">
+                    <a class="newsinfo" href="<?=$this->createUrl('/wap/serve/detail',['id'=>$value->id])?>">
                         <div class="newsimage"><img src="<?=ImageTools::fixImage($value['image'],120,80)?>" width="auto" height="auto" /></div>
                         <div style="margin-left: 20px" class="newsdate">
                             <p class="md"><?=$value['title']?></p>
@@ -84,7 +84,7 @@
                 <?php }?>
             </div>
             <div class="clear"></div>
-            <a href="<?=$this->createUrl('/home/news/list')?>" class="more">MORE</a>
+            <a href="<?=$this->createUrl('/wap/serve/info')?>" class="more">MORE</a>
             <div style="height:0">&nbsp;</div>
         </div>
     </div>
