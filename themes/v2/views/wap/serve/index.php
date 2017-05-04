@@ -1,5 +1,5 @@
 <?php 
-    $this->pageTitle = '业务详情';
+    $this->pageTitle = '服务项目';
 ?>
 <div class="npagePage">
                 <div class="content plr10">

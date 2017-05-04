@@ -27,7 +27,7 @@
                                             <p class="subtitle"><?=date('Y-m-d',$info['created'])?></p>
                                         </div>
                                         <div class="postbody">
-                                            <p><img src="<?=ImageTools::fixImage($info['image'])?>" /></p>
+                                            <p><img src="<?=ImageTools::fixImage($info['image'],600,400)?>" /></p>
                                             <p>
                                                 <br/>
                                             </p>

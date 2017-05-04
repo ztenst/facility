@@ -1,6 +1,12 @@
 <?php 
     $this->pageTitle = '业务详情';
 ?>
+<style type="text/css">
+    p img{
+        width: 400px !important;
+        height: 300px !important;
+    }
+</style>
 <div class="npagePage">
                 <div class="content plr10">
                     <div id="newpost">
