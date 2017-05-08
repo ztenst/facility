@@ -17,7 +17,7 @@
                 <p><?=$info->td?></p>
                 <p><center><h3>参数</h3></center></p>
                 <br>
-                <p><?=$info->td?></p>
+                <p><?=$info->cs?></p>
                 <?php if($images = $info->images): ?>
                 	<p><center><h3>相册</h3></center></p>
                 <br>
