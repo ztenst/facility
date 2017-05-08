@@ -56,6 +56,20 @@ class ProductController extends HomeController{
 		if(!$info) {
 			$this->redirect('list');
 		}
+		if(Yii::app()->request->getIsPostRequest()) {
+
+            $data['name'] = Yii::app()->request->getPost('name');
+            $data['pid'] = Yii::app()->request->getPost('pid');
+            $data['mail'] = Yii::app()->request->getPost('email');
+            $data['phone'] = Yii::app()->request->getPost('tel');
+            $data['msg'] = Yii::app()->request->getPost('content');
+            $guest = new GuestExt;
+            $guest->attributes = $data;
+            $guest->save();
+            $this->redirect('list');
+            // echo json_encode(['code'=>0,'data'=>'']);
+            Yii::app()->end();
+        }
 		$this->render('info',['info'=>$info]);
 	}
 

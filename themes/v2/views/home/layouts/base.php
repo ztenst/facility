@@ -32,7 +32,7 @@
                 <div id="headTop">
                     <a href="<?=$this->createUrl('/home/index/index')?>" id="logo" style="height: 70px;margin-top: -16px"><img src="<?=ImageTools::fixImage(SiteExt::getAttr('qjpz','pcLogo'))?>" width="220" height="40" /></a>
                     <div id="hcontact" class="fr"><i class="fa fa-phone"></i>
-                        <p><?=SiteExt::getAttr('qjpz','sitePhone')?>
+                        <p><?=SiteExt::getAttr('qjpz','sitePhone').' 021-62609991'?>
                             <br /><a href="<?=SiteExt::getAttr('qjpz','mail')?>"><?=SiteExt::getAttr('qjpz','mail')?></a></p>
                     </div>
                     <div id="openBtn" class="fl btn">
@@ -54,7 +54,6 @@
                             <li class="navitem"><a class="<?=$path=='home/serve/index'?'active':''?>" href="<?=$this->createUrl('/home/serve/index')?>" target="_self"><span data-title="服务中心">服务中心</span></a></li>
                             <li class="navitem"><a class="<?=$path=='home/serve/info'?'active':''?>"  href="<?=$this->createUrl('/home/serve/info')?>" target="_self"><span data-title="业务中心">业务中心</span></a></li>
                             <li class="navitem"><a class="<?=$path=='home/product/list'?'active':''?>" href="<?=$this->createUrl('/home/product/list')?>" target="_self"><span data-title="设备中心">设备中心</span></a></li>
-                            <li class="navitem"><a class="<?=$path=='home/rent/list'?'active':''?>" href="<?=$this->createUrl('/home/rent/list')?>" target="_self"><span data-title="设备租赁">设备租赁</span></a></li>
                             <li class="navitem"><a href="javascript:;" target=""><span data-title="关于我们">关于我们</span><i class="fa fa-angle-down"></i></a>
                                 <ul class="subnav">
                                     <li><a href="<?=$this->createUrl('/home/index/about')?>" target="_self">集团简介</a></li>

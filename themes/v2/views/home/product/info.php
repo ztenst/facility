@@ -14,18 +14,41 @@
                                 <div id="postWrapper">
                                     <div id="postInfo">
                                         <div class="wrapper scrollFixed" data-sf-top="20">
-                                            <p class="title">项目参数</p>
-                                            <p class="subtitle">仅供参考</p>
-                                            <div class="description">
-                                            <?=$info->cs?>
+                                            <p class="title">订单提交</p>
+                                            <br>
+                                            <!-- <p class="subtitle">仅供参考</p> -->
+                                            <div id="contactform" style="" class="wow">
+                                                <form id="f1" action=""  method="post">
+                                                    <p>
+                                                        <input id="pname" type="text" class="inputtxt" name="name" placeholder="姓名" autocomplete="off" />
+                                                    </p>
+                                                    <p>
+                                                        <input type="text" class="inputtxt" name="email" placeholder="邮箱" autocomplete="off" />
+                                                    </p>
+                                                    <p>
+                                                        <input id="pphone" type="text" class="inputtxt" name="tel" placeholder="电话" autocomplete="off" />
+                                                    </p>
+                                                    <p>
+                                                        <textarea class="inputtxt" name="content" placeholder="备注" autocomplete="off"></textarea>
+                                                    </p>
+                                                    <p>
+                                                        <input class="inputtxt submit" onclick="orderIt()" type="button" value="提交" />
+                                                        <input type="hidden" name="pid" value="<?=$info->id?>">
+                                                    </p>
+                                                </form>
                                             </div>
                                         </div>
                                     </div>
                                     <div id="postContent">
                                         <div class="postbody">
+                                        <h2>设备型号：<?=$info->name?></h2>
+                                        <br>
                                         <img src="<?=ImageTools::fixImage($info->image,600,400)?>">
                                         
                                         <?=$info->td?>
+                                        <h2>设备参数</h2>
+                                        <br>
+                                        <?=$info->cs?>
                                         </div>
                                         <div class="clear"></div>
                                         <div id="listContent">
@@ -64,3 +87,21 @@
                 </div>
             </div>
         </div>
+        <script type="text/javascript">
+    <?php Tools::startJs()?>
+    function orderIt() {
+        if($('#pname').val() == '') {
+            alert('请填写姓名');
+            return false; 
+        }
+        var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/; 
+        if(!myreg.test($("#pphone").val())) 
+        { 
+            alert('请输入有效的手机号码'); 
+            return false; 
+        } 
+        alert('提交成功');
+        document.getElementById('f1').submit();
+    }
+    <?php Tools::endJs('js')?>
+</script>
