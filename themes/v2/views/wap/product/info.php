@@ -1,5 +1,5 @@
 <?php
-  $this->pageTitle = '红酒详情';
+  $this->pageTitle = '设备详情';
 ?>
 <div class="npagePage">
     <div class="content">
