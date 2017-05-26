@@ -32,6 +32,18 @@ class AskController extends ApiController
         else
             $this->response(false,'提交失败！');
     }
+
+    public function actionTest()
+    {
+        // var_dump( Yii::app()->mRedis);exit;
+        // Yii::app()->mRedis->hSet('test1','id',1);
+        // var_dump(Yii::app()->mRedis->hGetAll('test1'));
+       // $redis = new Redis();
+       // $redis->connect('127.0.0.1', 6379);
+       // echo "Connection to server sucessfully";
+       //       //查看服务是否运行
+       // echo "Server is running: " . $redis->ping();
+    }
 }
 ?>
 
