@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="baidu-site-verification" content="9WmCoMNV8v" />
-    <meta name="keywords" content="吊车 汽车吊 搬厂 起重安装 设备租赁">
+    <meta name="keywords" content="上海弘钢机械设备有限公司-上海弘钢机械设备-吊车-汽车吊-搬厂-起重安装-设备租赁">
     <meta name="description" content="上海弘钢机械设备有限公司是一家专业从事机械设备租赁、汽车租赁、机电设备安装、建筑安装工程、人力装卸服务及机械设备科技领域的技术开发、技术咨询、技术转让、技术服务的企业。">
     <meta name="author" content="YY-MO">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
