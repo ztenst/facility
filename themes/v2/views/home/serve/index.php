@@ -1,4 +1,10 @@
-<?php $this->pageTitle = '上海弘钢机械设备有限公司-服务中心'?>
+<?php 
+$this->pageTitle = '上海弘钢机械设备有限公司-服务中心';
+$this->description = '上海弘钢机械设备有限公司提供以下服务：从事机械设备科技领域内的技术开发、技术咨询、技术转让、技术服务，建筑安装工程，机械设备租赁，汽车租赁，汽车及配件、机电成套设备的销售，人力装卸服务，机电设备安装与维修，建筑装饰装修建设工程设计施工一体化，道路运输服务。';
+$this->keyword = $this->keyword;
+?>
+
+
 <div class="npagePage post">
             <div id="pageTarget" class="module">
                 <div class="module_container">

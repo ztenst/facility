@@ -1,4 +1,10 @@
-<?php $this->pageTitle = '上海弘钢机械设备有限公司-业务中心'?>
+<?php 
+$this->pageTitle = '上海弘钢机械设备有限公司-业务中心';
+$this->description = '上海弘钢机械设备有限公司提供以下业务：工厂搬迁，起重吊装，大件运输，设备安装，设备维修，其他业务，吊装现场';
+$this->keyword = $this->keyword;
+?>
+
+
 <div class="npagePage post">
             <div id="pageTarget" class="module">
                 <div class="module_container">

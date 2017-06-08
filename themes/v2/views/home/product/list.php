@@ -1,4 +1,9 @@
-<?php $this->pageTitle = '上海弘钢机械设备有限公司-设备列表'?>
+<?php 
+$this->pageTitle = '上海弘钢机械设备有限公司-设备列表';
+$this->description = '上海弘钢机械设备有限公司-汽车起重机，叉车，特种车定制车，升高车，随车吊';
+$this->keyword = $this->keyword;
+?>
+
 
 <div class="npagePage">
             <!-- <div id="banner">

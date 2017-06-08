@@ -77,7 +77,7 @@ class HomeController extends Controller
 
     public function getKeyword(){
         if($this->keyword === null){
-            $this->keyword = '里奥哈葡萄酒,进口红酒,西班牙红酒,里奥哈酒庄,进口顶级红酒';
+            $this->keyword = '上海弘钢机械设备有限公司,上海弘钢机械设备,吊车,汽车吊,搬厂,起重安装,设备租赁';
         }
         return $this->keyword;
     }
@@ -92,7 +92,7 @@ class HomeController extends Controller
 
     public function getDescription(){
         if($this->description === null){
-            $this->description = '马德里公馆主营西班牙进口红酒,介绍西班牙里奥哈葡萄酒历史、文化和知识。为追求品质吃喝的你带来高价值的红酒及橄榄油科普,提供全国线下产品体验中心。';
+            $this->description = '上海弘钢机械设备有限公司竭诚为您服务';
         }
         return $this->description;
     }

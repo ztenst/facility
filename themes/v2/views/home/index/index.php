@@ -1,5 +1,7 @@
-<?php
-  $this->pageTitle = '上海弘钢机械设备有限公司-首页';
+<?php 
+$this->pageTitle = '上海弘钢机械设备有限公司-首页';
+$this->description = '上海弘钢机械设备有限公司-首页';
+$this->keyword = $this->keyword;
 ?>
 
         <div id="indexPage" data-scroll-ease="Expo.easeInOut" data-scroll-speed="1" data-control="0" data-control-wheel="0" data-singlescreen="0">
