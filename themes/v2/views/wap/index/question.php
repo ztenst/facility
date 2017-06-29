@@ -41,6 +41,7 @@
                 希望大家踊跃发言哦~~</p>
             </div>
             <ul id="projectimages" class="plr5">
+            <li><img src="http://okwfe8mj2.bkt.clouddn.com/2017/0629/1498741917401576092.png" class="imgcw" /></li>
             </ul>
             <div class="clear"></div>
             <div class="postbody plr10">
