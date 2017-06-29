@@ -1,5 +1,7 @@
-<?php
-  $this->pageTitle = '弘钢机械设备-联系我们';
+<?php 
+$this->pageTitle = '上海弘钢机械设备有限公司-联系我们';
+$this->description = '上海弘钢机械设备有限公司-联系我们';
+$this->keyword = $this->keyword;
 ?>
 <div class="npagePage pageEditor" id="page_contact">
             <div id="banner">

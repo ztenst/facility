@@ -1,4 +1,11 @@
-<?php $this->pageTitle = '上海弘钢机械设备有限公司-'.$info->name?>
+<?php 
+    $this->pageTitle = '上海弘钢机械设备有限公司-'.$info->name;
+    $this->description = '上海弘钢机械设备有限公司提供以下设备：'.$info->name;
+    $this->keyword = $this->keyword.','.$info->name;
+?>
+
+
+
 <div class="npagePage post">
             <div id="pageTarget" class="module">
                 <div class="module_container">
