@@ -50,4 +50,16 @@ class IndexController extends WapController{
         // var_dump($info->attributes);exit;
         $this->render('contact',['info'=>$info]);
     }
+
+    public function actionQuestion()
+    {
+        if(Yii::app()->request->getIsPostRequest()) {
+            $vs = Yii::app()->request->getPost('ErExt');
+            $model = new ErExt;
+            $model->attributes = $vs;
+            $model->save();
+        }
+        $this->layout = 'layouts/no';
+        $this->render('question');
+    }
 }
