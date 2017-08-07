@@ -86,7 +86,7 @@
     </div>
     <div id="footer">
         <p><span class="ellipsis">COPYRIGHT (©) 2017  上海弘钢机械设备有限公司. </span>
-            <a class="beian" href="http://www.miitbeian.gov.cn/" style="color: #363636;vertical-align: top;margin-left: 10px;display: inline-block;" target="_blank"></a>
+            <a class="beian" href="http://www.miitbeian.gov.cn/" style="color: #363636;vertical-align: top;margin-left: 10px;display: inline-block;" target="_blank">苏ICP备16039983号-3</a>
         </p>
     </div>
     <div id="shares"><a href="http://service.weibo.com/share/share.php?appkey=3206975293&" target="_blank" id="sweibo"><i class="fa fa-weibo"></i></a><a href="javascript:;" id="gotop"><i class="fa fa-angle-up"></i></a></div>
