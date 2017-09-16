@@ -86,12 +86,12 @@
     </div>
     <div id="footer">
         <p><span class="ellipsis">COPYRIGHT (©) 2017  上海弘钢机械设备有限公司. </span>
-            <a class="beian" href="http://www.miitbeian.gov.cn/" style="color: #363636;vertical-align: top;margin-left: 10px;display: inline-block;" target="_blank">苏ICP备16039983号-3</a>
+            <a class="beian" href="http://www.miitbeian.gov.cn/" style="color: #363636;vertical-align: top;margin-left: 10px;display: inline-block;" target="_blank">沪ICP备17041746号</a>
         </p>
     </div>
     <div id="shares"><a href="http://service.weibo.com/share/share.php?appkey=3206975293&" target="_blank" id="sweibo"><i class="fa fa-weibo"></i></a><a href="javascript:;" id="gotop"><i class="fa fa-angle-up"></i></a></div>
     <div id="online_open"><i class="fa fa-comments-o"></i></div>
-    <div id="online_lx">
+    <div id="online_lx">    
         <div id="olx_head">在线咨询<i class="fa fa-times fr" id="online_close"></i></div>
         <ul id="olx_qq">
             <li><a href="tencent://message/?uin=<?=SiteExt::getAttr('qjpz','qq')?>&Site=uelike&Menu=yes"><i class="fa fa-qq"></i><?=SiteExt::getAttr('qjpz','qq')?></a></li>
