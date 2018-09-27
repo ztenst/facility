@@ -134,7 +134,7 @@ $this->keyword = $this->keyword;
                                     <p class="ellipsis">地址：上海市四平路2158号国定·富庆大厦1305室</p>
                                     <p class="ellipsis">邮编：200433</p>
                                     <p class="ellipsis">电话：021-62609991</p>
-                                    <p class="ellipsis">手机：13817785788</p>
+                                    <p class="ellipsis">手机：<?=SiteExt::getAttr('qjpz','sitePhone')?></p>
                                     <p class="ellipsis">传真：021-62290358</p>
                                     <p class="ellipsis">邮箱：yanan_76@sina.com</p>
                                     <div><a class="fl" target="_blank" href="http://weibo.com/web"><i class="fa fa-weibo"></i></a><a class="fl" target="_blank" href="tencent://message/?uin=<?=SiteExt::getAttr('qjpz','qq')?> &Site=uemo&Menu=yes"><i class="fa fa-qq"></i></a> </div>
